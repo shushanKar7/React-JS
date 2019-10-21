@@ -6,11 +6,11 @@ class App extends Component{
 state = {
   bool: false,
   arr: [
-    {text: "This is 1st text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
-    {text: "This is 2nd text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
-    {text: "This is 3rd text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
-    {text: "This is 4th text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
-    {text: "This is 5th text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },    
+    {text: "This is first text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
+    {text: "This is second text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
+    {text: "This is third text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
+    {text: "This is fourth text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },
+    {text: "This is fifth text", color: `rgb( ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) }, ${ Math.floor (Math.random() * 255) } )` },    
   ]
   
 }
