@@ -6,7 +6,8 @@ class App extends Component {
   state = {
     data: [],
     titles: ["Full Name", "Email", "Company", "Position", "Country", "Edit"],
-    inputValues: ["fullName", "email", "company", "position", "country"],
+    inputValues: ["fullName", "email", "Company", "position", "country"],
+    //hide/show elements onClick
     showInputValues: false,
     fullName: "",
     email: "",
@@ -14,6 +15,7 @@ class App extends Component {
     position: "",
     country: ""
   };
+  //get input values for change
   getValues = () => {
     this.setState({
       fullName: this.fullName.value,
@@ -23,6 +25,7 @@ class App extends Component {
       country: this.country.value
     });
   };
+  //hide/show elements onClick-edit
   showTD = () => {
     this.setState({
       showInputValues: !this.showInputValues
@@ -33,6 +36,7 @@ class App extends Component {
     this.addData();
     this.getData();
   }
+  //make change on click, post changed data
   changeData = () => {
     fetch("http://rest.learncode.academy/api/johnbob/friends", {
       method: "POST",
@@ -95,6 +99,7 @@ class App extends Component {
         <div className="tbl-content">
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody></tbody>
+            {/* draw table bodies on click(Show Data button) */}
             {this.state.data.length !== 0
               ? this.state.data.map((val, index) => {
                   return (
@@ -113,6 +118,7 @@ class App extends Component {
               : null}
           </table>
         </div>
+        {/* Show input form while clicking on edit icon */}
         {this.state.showInputValues ? (
           <div className="main2">
             <input
@@ -141,7 +147,7 @@ class App extends Component {
               name="country"
             ></input>
             <button onClick={this.changeData}>Change</button>
-            
+            {/* change table body's values to new values */}
             {this.state.fullName !== this.state.fullName.value ||
             this.state.email !== this.state.email.value ||
             this.state.company !== this.state.company.value ||
