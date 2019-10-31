@@ -1,97 +1,163 @@
 body{
-    display: block;
-    margin: 8px;
+  display: block;
+  margin: 8px;
 }
 h1{
-    font-size: 30px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  table{
-    width:100%;
-    table-layout: fixed;
-  }
-  .tbl-header{
-    background-color: rgba(255,255,255,0.3);
-    
-   }
-  .tbl-content{
-    height:300px;
-    overflow-x:auto;
-    margin-top: 0px;
-    border: 1px solid rgba(255,255,255,0.3);
-  }
-  th{
-    padding: 20px 15px;
-    text-align: left;
-    font-weight: 500;
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  td{
-    padding: 15px;
-    text-align: left;
-    vertical-align:middle;
-    font-weight: 300;
-    font-size: 12px;
-    color: #fff;
-    border-bottom: solid 1px rgba(255,255,255,0.1);
-  }
-  .btn{
-    color: #25c481;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: #fff;
-    padding: 10px;
-    display: inline-block;
-    border: none;
-    transition: all 0.4s ease 0s;
-    cursor: pointer;
-   }
-   .btn:hover{
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    transition: all 0.4s ease 0s;
-   }
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
   
-  
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-  body{
-    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-    background: linear-gradient(to right, #25c481, #25b7c4);
-    font-family: 'Roboto', sans-serif;
-  }
-  section{
-    margin: 50px;
-  }
-  
-  
-  .made-with-love {
-    margin-top: 40px;
-    padding: 10px;
-    clear: left;
-    text-align: center;
-    font-size: 10px;
-    font-family: arial;
-    color: #fff;
-  }
-  .made-with-love i {
-    font-style: normal;
-    color: #F50057;
-    font-size: 1.2em;
-    position: relative;
-    top: 2px;
-  }
-  .made-with-love a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .made-with-love a:hover {
-    text-decoration: underline;
-  }
-  
-  
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 15px 25px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 20px 25px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+.btn{
+  color: #25c481;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #fff;
+  padding: 10px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+ }
+ .btn:hover{
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  transition: all 0.4s ease 0s;
+ }
 
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+.main{
+  width: 55%;
+  margin: auto;
+}
+
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 1.2em;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+i{
+  cursor: pointer;
+}
+
+.main2{
+  width: 20%;
+  position: absolute;
+  top: 18%;
+  right: 39%;
+  border: 2px solid #fff;
+  border-radius: 10%;
+  background: #fff;
+  
+}
+.allInputs::placeholder{
+  color: #fff;
+}
+.allInput::placeholder{
+  color: #fff;
+}
+.allInputs{
+  display: flex;
+  margin:auto;
+  margin-top: 2%;
+  padding: 5px;
+  text-align: center;
+  background: #09bfcf;
+  border:none;
+  
+}
+.allInputs:hover{
+  border: 2px solid #09bfcf;
+  
+}
+.allInput:hover{
+  border: 2px solid #25b7c4;
+  
+}
+.btn2:hover{
+  border: 2px solid #25b7c4;
+
+}
+.btn2{
+  color: #fff;
+  text-decoration: none;
+  background: #09bfcf;
+  padding: 5px;
+  margin-bottom: 4%;
+  border: none;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+ }
+.btnWrapper{
+  display:flex;
+  justify-content: space-around;
+}
+ .allInput{
+  display: flex;
+  margin:auto;
+  margin-top: 5%;
+  padding: 5px;
+  text-align: center;
+  background: #09bfcf;
+  border:none;
+ }
+ 

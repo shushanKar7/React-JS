@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Titles } from "./Titles";
+import {Fragment} from 'react'
+
 
 class App extends Component {
   state = {
@@ -9,12 +11,19 @@ class App extends Component {
     inputValues: ["fullName", "email", "Company", "position", "country"],
     //hide/show elements onClick
     showInputValues: false,
+    closeInputValues: false,
     fullName: "",
     email: "",
     company: "",
     position: "",
     country: ""
   };
+  //close input form
+  closeForm = () => {
+    this.setState({
+      closeInputValues: !this.closeInputValues
+    })
+  }
   //get input values for change
   getValues = () => {
     this.setState({
@@ -82,6 +91,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div className="main">
         <h1>FIXED TABLE HEADER</h1>
         <div class="tbl-header">
@@ -118,51 +128,42 @@ class App extends Component {
               : null}
           </table>
         </div>
+        
         {/* Show input form while clicking on edit icon */}
-        {this.state.showInputValues ? (
+        {this.state.showInputValues  ? (
           <div className="main2">
             <input
               placeholder="Full Name"
               ref={el => (this.fullName = el)}
-              name="fullName"
-            ></input>
+              name="fullName" className="allInput"
+            ></input><br/>
             <input
               placeholder="Email"
               ref={el => (this.email = el)}
-              name="email"
-            ></input>
+              name="email" className="allInputs"
+            ></input><br/>
             <input
               placeholder="Company"
               ref={el => (this.company = el)}
-              name="company"
-            ></input>
+              name="company" className="allInputs"
+            ></input><br/>
             <input
               placeholder="Position"
               ref={el => (this.position = el)}
-              name="position"
-            ></input>
+              name="position" className="allInputs"
+            ></input><br/>
             <input
               placeholder="Cuntry"
               ref={el => (this.country = el)}
-              name="country"
-            ></input>
-            <button onClick={this.changeData}>Change</button>
-            {/* change table body's values to new values */}
-            {this.state.fullName !== this.state.fullName.value ||
-            this.state.email !== this.state.email.value ||
-            this.state.company !== this.state.company.value ||
-            this.state.position !== this.state.position.value ||
-            this.state.country !== this.state.country.value ? (
-              <tr>
-                <td>{this.state.fullName.value}</td>
-                <td>{this.state.email.value}</td>
-                <td>{this.state.company.value}</td>
-                <td>{this.state.position.value}</td>
-                <td>{this.state.country.value}</td>
-              </tr>
-            ) : null}
-          </div>
+              name="country" className="allInputs"
+            ></input><br/>
+            <div className="btnWrapper">
+           <button onClick={this.changeData} className="btn2">Change</button> 
+           <button onClick={this.closeForm} className="btn2">Close</button>
+            </div> 
+            </div>
         ) : null}
+    
         <div class="made-with-love">
           Made with
           <i>♥</i> by
