@@ -24,6 +24,7 @@ class SignUp extends Component {
     errors: {
       name: "",
       surname: "",
+
       email: "",
       password: ""
     }
@@ -37,6 +38,9 @@ class SignUp extends Component {
     switch (name) {
       case "name":
         errors.name = value.length < 5 ? "Name must be 5 characters long!" : "";
+        break;
+      case "surname":
+        errors.surname = value.length < 2 ? "Name must be 2 characters long!" : "";
         break;
       case "email":
         errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
@@ -69,76 +73,87 @@ class SignUp extends Component {
               <div className="logo"></div>
             </div>
           </div>
-         <div className="box2">
-         <div className="content">
-         <h2 className="title">Sign Up</h2>
-            <form  onSubmit={this.handleSubmit} noValidate>
-            <div>
-                <input
-                  type="text"
-                  required
-                  name="name"
-                  id="name"
-                  placeholder="Enter Your Name"
-                  onChange={this.handleChange} noValidate
-                />
-                 {errors.name.length > 0 && 
-                  <span className='error'>{errors.name}</span>}
-              </div>
-              <div>
-                <input
-                  type="text"
-                  required
-                  name="surname"
-                  id="surname"
-                  placeholder="Enter Your Surname"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  required
-                  name="email"
-                  id="email"
-                  placeholder="Enter Your Email"
-                  onChange={this.handleChange} noValidate
-                />
-                {errors.email.length > 0 && 
-                <span className='error'>{errors.email}</span>}
-              </div>
-              <div>
-                <input
-                  type="password"
-                  required
-                  name="password"
-                  id="password"
-                  placeholder="Enter Password"
-                  onChange={this.handleChange} noValidate
-                />
-                {errors.password.length > 0 && 
-                 <span className='error'>{errors.password}</span>}
-              </div>
-              <div>
-                <input
-                  type="password"
-                  required
-                  name="password"
-                  id="password"
-                  placeholder="Confirm your Password"
-                />
-              </div>
-              <div>
-                <button className="submit">Sign Up</button>
-              </div>
-            </form>
-            <p>
-              Already have an account?{" "}
-              <a class="changer" href="#">
-                Sign in
-              </a>{" "}
-            </p>
-             </div>   
-         </div>
+          <div className="box2">
+            <div className="content">
+              <h2 className="title">Sign Up</h2>
+              <form onSubmit={this.handleSubmit} noValidate>
+                <div>
+                  <input
+                    type="text"
+                    required
+                    name="name"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    onChange={this.handleChange}
+                    noValidate
+                  />
+                  {errors.name.length > 0 && (
+                    <span className="error">{errors.name}</span>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    required
+                    name="surname"
+                    id="surname"
+                    placeholder="Enter Your Surname"
+                    onChange={this.handleChange}
+                    noValidate
+                  />
+                  {errors.surname.length > 0 && (
+                    <span className="error">{errors.surname}</span>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    required
+                    name="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                    onChange={this.handleChange}
+                    noValidate
+                  />
+                  {errors.email.length > 0 && (
+                    <span className="error">{errors.email}</span>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    required
+                    name="password"
+                    id="password"
+                    placeholder="Enter Password"
+                    onChange={this.handleChange}
+                    noValidate
+                  />
+                  {errors.password.length > 0 && (
+                    <span className="error">{errors.password}</span>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="password"
+                    required
+                    name="password"
+                    id="password"
+                    placeholder="Confirm your Password"
+                  />
+                </div>
+                <div>
+                  <button className="submit">Sign Up</button>
+                </div>
+              </form>
+              <p>
+                Already have an account?{" "}
+                <a class="changer" href="#">
+                  Sign in
+                </a>{" "}
+              </p>
+            </div>
+          </div>
         </div>
       </Fragment>
     );
