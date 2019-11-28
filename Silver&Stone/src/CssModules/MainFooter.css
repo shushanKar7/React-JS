@@ -1,0 +1,34 @@
+/* Main footer */
+
+.mainFooterBlock {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translateX(-50%);
+}
+
+.under_slide_ul {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-transform: uppercase;
+}
+.fb,
+.inst,
+.twit {
+  width: 100px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: initial;
+  padding: 5px 20px;
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+}
+.twit:hover,
+.fb:hover,
+.inst:hover {
+  transform: scale(1.2);
+  border-bottom: 0.5px solid white;
+}
