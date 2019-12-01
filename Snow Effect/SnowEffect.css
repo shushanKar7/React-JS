@@ -1,0 +1,145 @@
+body {
+    padding: 0;
+     margin: 0;
+   }
+   .snowContainer{
+     overflow: hidden;
+     height: auto;
+   }
+   
+   .snowImageBg {
+     background-image: url(christmasHeader.jpg);
+     width: 1290px;
+     height: 597px;
+     background-position: center;
+     backface-visibility: visible;
+     background-size: cover;
+     filter: brightness(0.6);
+   }
+   
+   .snowfield {
+     position: fixed;
+     width: 100%;
+     animation-name: falling;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-in-out;
+   }
+   
+   ._160.snowfield {
+     font-size: 490%;
+     animation-duration: 15s;
+   }
+   ._150.snowfield {
+     font-size: 390%;
+     animation-duration: 25s;
+   }
+   ._130.snowfield {
+     font-size: 490%;
+     animation-duration: 35s;
+   }
+   ._100.snowfield {
+     font-size: 390%;
+     animation-duration: 55s;
+   }
+   ._90.snowfield {
+     font-size: 290%;
+     animation-duration: 105s;
+   }
+   
+   .snowfield > p:nth-of-type(1) {
+     animation-duration: 5;
+   }
+   .snowfield > p:nth-of-type(2) {
+     animation-duration: 24;
+   }
+   .snowfield > p:nth-of-type(3) {
+     animation-duration: 35;
+   }
+   .snowfield > p:nth-of-type(4) {
+     animation-duration: 8s;
+   }
+   .snowfield > p:nth-of-type(5) {
+     animation-duration: 24s;
+   }
+   .snowfield > p {
+     position: relative;
+     display: inline-block;
+     text-shadow: 0px 0px 2px white;
+     color: transparent;
+     margin-right: 14%;
+     animation-name: waving;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+   }
+   
+   .snowfield > p:after {
+     content: ".";
+     position: relative;
+     top: 20em;
+     text-shadow: 0px 0px 2px white;
+     color: transparent;
+     animation-name: waving;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+   }
+   
+   .snowfield > p:before {
+     content: ".";
+     text-overflow: clip;
+     position: relative;
+     top: 40em;
+     text-shadow: 0px 0px 2px white;
+     color: transparent;
+     animation-name: waving;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+   }
+   
+   @keyframes waving {
+     0% {
+       margin-left: inherit;
+       margin-right: inherit;
+     }
+     25% {
+       margin-left: 25%;
+       margin-right: 15%;
+     }
+     50% {
+       margin-left: 25%;
+       margin-right: 15%;
+     }
+     75% {
+       margin-left: 25%;
+       margin-right: 15%;
+     }
+     100% {
+       margin-left: inherit;
+       margin-right: inherit;
+     }
+   }
+   
+   @keyframes falling {
+     0% {
+       top: -50%;
+       margin-left: 0;
+       margin-right: 0;
+     }
+     25% {
+       margin-left: 25%;
+       margin-right: 10%;
+     }
+     50% {
+       margin-left: 10%;
+       margin-right: 25%;
+     }
+     75% {
+       margin-left: 25%;
+       margin-right: 10%;
+     }
+     100% {
+       margin-left: inherit;
+       margin-right: inherit;
+       top: 100%;
+     }
+   }
+   
