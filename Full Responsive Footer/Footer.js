@@ -1,14 +1,15 @@
 import React from "react";
 import { Fragment } from "react";
 
-const SignIn = () => {
+const Footer = () => {
   return (
     <Fragment>
       <footer className="footer-distributed">
         <div className="footer-left">
           <span className="leftText">Get in Touch</span>
           <p className="leftTextP">
-            Be the first to know about exciting new designs, special events,
+            Be the first to know about exciting <br />
+            new designs, special events,
             <br />
             store openings and much more
           </p>
@@ -19,14 +20,14 @@ const SignIn = () => {
             <button className="subscribe">Subscribe</button>
           </form>
           <br />
-          <p className="footer-company-name">© 2019 Silver & Stone</p>
+          <p className="footerCompanyName">© 2019 Silver & Stone</p>
         </div>
         <div className="footer-center">
           <div>
             <span className="centerText">Contact Us</span>
             <i className="fa fa-map-marker"></i>
             <p>
-              <span>1/7 Alek 0025, Manukian St,</span>
+              <span>1/7 Alek, Manukian St,</span>
               Yerevan 0070
             </p>
           </div>
@@ -52,21 +53,24 @@ const SignIn = () => {
             you desire in order to restore balance and live your life to the
             fullest potential.
           </p>
-          <div className="footer-icons">
-            <a>
-              <i className="fa fa-facebook"></i>
+          <div class="social">
+            <a class="link facebook" target="_parent">
+              <span class="fa fa-facebook-square"></span>
             </a>
-            <a>
-              <i className="fa fa-twitter"></i>
+            <a className="link twitter" target="_parent">
+              <span className="fa fa-twitter"></span>
             </a>
-            <a>
-              <i className="fa fa-instagram"></i>
+            <a class="link instagram" target="_parent">
+              <span class="fa fa-instagram"></span>
             </a>
-            <a>
-              <i className="fa fa-linkedin"></i>
+            <a class="link youtube" target="_parent">
+              <span class="fa fa-youtube"></span>
             </a>
-            <a>
-              <i className="fa fa-youtube"></i>
+            <a class="link linkedin" target="_parent">
+              <span class="fa fa-linkedin"></span>
+            </a>
+            <a class="link pinterest" target="_parent">
+              <span class="fa fa-pinterest"></span>
             </a>
           </div>
         </div>
@@ -75,4 +79,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Footer;
